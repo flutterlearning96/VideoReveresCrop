@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x7X-20-EVn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0V3-vV-QSN">
+            <objects>
+                <tabBarController id="x7X-20-EVn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UOc-kU-Hoz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rcX-oZ-Whh" kind="relationship" relationship="viewControllers" id="w7L-ea-eXE"/>
+                        <segue destination="K5W-EI-8Zc" kind="relationship" relationship="viewControllers" id="Ukv-m1-AbT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvy-uq-wGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1414" y="-235"/>
+        </scene>
+        <!--Photos LibraryVC-->
+        <scene sceneID="Dgk-lI-EQ6">
+            <objects>
+                <collectionViewController id="TAs-vI-V65" customClass="PhotosLibraryVC" customModule="VideoMerger" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9uz-Qu-K0z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Gf-0z-3k5">
+                            <size key="itemSize" width="80" height="80"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCollectionViewCell" id="j1P-4D-9Wn" customClass="PhotosCollectionViewCell" customModule="VideoMerger" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jex-1e-ESX">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x6q-1a-Fpd">
+                                            <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="28" placeholder="YES" id="O6L-Kv-RCz"/>
+                                                <constraint firstAttribute="height" constant="28" placeholder="YES" id="TeW-e2-1ID"/>
+                                            </constraints>
+                                        </imageView>
+                                        <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-Zc-pBN">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qrw-lY-xOk">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ov-r0-tcc">
+                                                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="6Ov-r0-tcc" secondAttribute="trailing" constant="8" id="NcH-92-jBF"/>
+                                                    <constraint firstItem="6Ov-r0-tcc" firstAttribute="top" secondItem="Qrw-lY-xOk" secondAttribute="top" constant="8" id="ULa-pg-1Fw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6Ov-r0-tcc" secondAttribute="bottom" constant="8" id="dYD-0o-GNM"/>
+                                                    <constraint firstItem="6Ov-r0-tcc" firstAttribute="leading" secondItem="Qrw-lY-xOk" secondAttribute="leading" constant="8" id="yEX-4p-Ot8"/>
+                                                </constraints>
+                                            </view>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jex-1e-ESX" secondAttribute="trailing" id="0GL-Yc-Ddz"/>
+                                    <constraint firstItem="Jex-1e-ESX" firstAttribute="leading" secondItem="j1P-4D-9Wn" secondAttribute="leading" id="10v-vF-LZB"/>
+                                    <constraint firstItem="Jex-1e-ESX" firstAttribute="top" secondItem="j1P-4D-9Wn" secondAttribute="top" id="3lm-xh-uKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="KfG-Zc-pBN" secondAttribute="trailing" id="8i6-mt-iKr"/>
+                                    <constraint firstItem="KfG-Zc-pBN" firstAttribute="leading" secondItem="j1P-4D-9Wn" secondAttribute="leading" id="BFP-Iv-bu1"/>
+                                    <constraint firstItem="KfG-Zc-pBN" firstAttribute="top" secondItem="j1P-4D-9Wn" secondAttribute="top" id="Non-Wq-1nl"/>
+                                    <constraint firstItem="x6q-1a-Fpd" firstAttribute="leading" secondItem="j1P-4D-9Wn" secondAttribute="leading" id="Z8c-n1-xZH"/>
+                                    <constraint firstAttribute="bottom" secondItem="KfG-Zc-pBN" secondAttribute="bottom" id="b7I-DG-JyX"/>
+                                    <constraint firstItem="x6q-1a-Fpd" firstAttribute="top" secondItem="j1P-4D-9Wn" secondAttribute="top" id="kNq-Ir-7KG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jex-1e-ESX" secondAttribute="bottom" id="uL9-w1-oMe"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="blurView" destination="KfG-Zc-pBN" id="j6j-G5-wPr"/>
+                                    <outlet property="imageView" destination="Jex-1e-ESX" id="rfe-63-7c1"/>
+                                    <outlet property="lblPhotoCount" destination="6Ov-r0-tcc" id="GOx-YL-dMh"/>
+                                    <outlet property="livePhotoBadgeImageView" destination="x6q-1a-Fpd" id="Kbt-lr-bfN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="TAs-vI-V65" id="3D3-EN-WrD"/>
+                            <outlet property="delegate" destination="TAs-vI-V65" id="oBE-tM-tuu"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="dNT-uG-dve"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYD-F4-Bpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="-198"/>
+        </scene>
+        <!--ImageVideo(Audio)Story-->
+        <scene sceneID="gwi-Qp-uAY">
+            <objects>
+                <navigationController id="rcX-oZ-Whh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ImageVideo(Audio)Story" id="Ray-eh-7g9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gEt-qw-DlL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hCI-tK-Oso" kind="relationship" relationship="rootViewController" id="sTx-od-LmA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMw-jU-58v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375" y="-216"/>
+        </scene>
+        <!--Image Audio VideoVC-->
+        <scene sceneID="ud6-Vb-rk2">
+            <objects>
+                <viewController id="hCI-tK-Oso" customClass="ImageAudioVideoVC" customModule="VideoMerger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="US9-L1-UDt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="imY-CR-nZ2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a4M-Wv-uMF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdC-43-O8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="-198"/>
+        </scene>
+        <!--ImageVideoStory-->
+        <scene sceneID="W0j-oe-Qet">
+            <objects>
+                <viewController id="K5W-EI-8Zc" customClass="ImageToVideoVC" customModule="VideoMerger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vZu-Q7-InK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Y5w-sc-kCY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ImageVideoStory" id="L1R-vT-PUo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLM-sk-QLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
